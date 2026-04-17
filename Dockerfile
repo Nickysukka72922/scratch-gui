@@ -5,6 +5,9 @@ WORKDIR /app
 COPY package*.json ./
 COPY .nvmrc ./
 COPY scripts/ ./scripts/
+COPY src/ ./src/
+COPY webpack.config.js ./
+COPY static/ ./static/
 
 RUN npm ci
 RUN npm run prepublish
